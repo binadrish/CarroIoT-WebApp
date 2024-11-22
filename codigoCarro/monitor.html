@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Monitor Carro IoT</title>
+</head>
+<body>
+    <div class="container">
+    <!-- Contenedor para mostrar la tabla con los datos de la BD -->
+        <h1>Monitor CARRO IOT</h1>
+        <div id="tableContainer"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

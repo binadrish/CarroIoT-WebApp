@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Control Carro IoT</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Movimientos</h1>
+        <div class="button-container">
+            <button id="getbd">Mostrar BD</button>
+            <button id="adelante" status="0">Adelante</button>
+            <button id="atras" status="1">Atras</button>
+            <button id="detenerse" status="2">Detenerse</button>
+            <button id="vuelta_izquierda" status="3">Vuelta Izquierda</button>
+            <button id="vuelta_derecha" status="4">Vuelta Derecha</button>
+            <button id="giro_izquierda" status="5">Giro Izquierda</button>
+            <button id="giro_derecha" status="6">Giro Derecha</button>
+            <button id="demo" status="7">Demo</button>
+        </div>
+
+        <div class="response-container">
+            <h3>Respuesta de la API:</h3>
+            <pre id="response"></pre>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
