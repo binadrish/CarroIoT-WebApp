@@ -140,12 +140,12 @@ bd_api = bdAPI()
 
 # Ruta para la página web (HTML)
 @app.route('/')
-def obtener_item():
+def mostrar_index():
     return render_template('index.html')
 
 # Ruta para la página web (HTML)
 @app.route('/monitor')
-def obtener_item():
+def mostrar_monitor():
     return render_template('monitor.html')
 
 # Ruta para api que manda un json con el último registro de la base de datos

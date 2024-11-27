@@ -11,30 +11,37 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 h1 {
     text-align: center;
     color: #333;
 }
 .button-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 5px; /* Espaciado entre los botones */
+    margin: 10px 0; /* Separación del resto del contenido */
+    width: 50%;
 }
 button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 16px;
+    font-size: xx-large;
+    font-weight: bolder;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 button:hover {
-    background-color: #45a049;
+    background-color: #347737;
 }
 .response-container {
     margin-top: 20px;
@@ -42,4 +49,27 @@ button:hover {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+#vuelta_izquierda, #vuelta_derecha{
+    background-color: darkorange;
+}
+
+#vuelta_izquierda:hover, #vuelta_derecha:hover{
+    background-color: rgb(185, 102, 0);
+}
+
+#detenerse{
+    background-color: crimson;
+}
+
+#detenerse:hover{
+    background-color: rgb(149, 13, 41);
+}
+
+#demo{
+    background-color: fuchsia;
+}
+#demo:hover{
+    background-color: rgb(172, 1, 172);
 }
