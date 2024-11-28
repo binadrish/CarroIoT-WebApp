@@ -66,7 +66,7 @@ class ItemAPI:
         try:
             conn = get_db_connection()
             cursor = conn.cursor()
-            cursor.execute("SELECT * FROM IoTCarStatus")  
+            cursor.execute("SELECT * FROM IoTCarStatus ORDER BY id DESC LIMIT 10")  
             rows = cursor.fetchall()
             data = [{"id": row[0], "status": row[1], "ip_client": row[2], "name": row[3], "date": row[4], "id_device": row[5]} for row in rows]  # Modifica las columnas según tu tabla
             cursor.close()

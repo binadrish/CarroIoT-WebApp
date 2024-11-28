@@ -15,12 +15,10 @@ function showError(error) {
 function insertdb(event) {
     const buttonId = 1;
     const newStatus = event.target.getAttribute('status');  // Obtiene el estado desde el atributo 'status'
-    const newIp = "192.168.1.10"; 
-    const newName = "Carro1"; 
-    const newDate = "2024-11-13 15:47:31"; 
+    const newName = document.getElementById('input-textbox').value; // Obtiene el valor del textbox    const newDate = "2024-11-13 15:47:31"; 
     const newDevice = "R5cCI6IkpXVCJ9"; 
 
-    axios.post('http://34.228.237.52/api/item', { id: buttonId, status: newStatus, ip_client:newIp, name:newName, date:newDate, ip_device:newDevice })
+    axios.post('http://34.228.237.52/api/item', { id: buttonId, status: newStatus, name:newName, date:newDate, ip_device:newDevice })
         .then(function (response) {
             showResponse(response.data);
         })
